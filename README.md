@@ -15,3 +15,6 @@
  
  
  ![Optional Text](../master/gif/traffic.gif)
+ 
+ 
+ Legend: The numbers in the figure represent the number of cars at the junction during that time.
