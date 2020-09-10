@@ -1,5 +1,5 @@
 [System]
-Name='fuzzyselect'
+Name='selectroad'
 Type='mamdani'
 Version=2.0
 NumInputs=4
@@ -9,49 +9,49 @@ AndMethod='min'
 OrMethod='max'
 ImpMethod='min'
 AggMethod='max'
-DefuzzMethod='bisector'
+DefuzzMethod='centroid'
 
 [Input1]
-Name='street1'
+Name='road1'
 Range=[0 60]
 NumMFs=3
-MF1='low':'trimf',[0 0 22]
-MF2='medium':'trimf',[10 30 42]
-MF3='high':'trimf',[38 60 60]
+MF1='low':'trimf',[-25 0 20]
+MF2='medium':'trimf',[10 30 50]
+MF3='high':'trimf',[40 60 85]
 
 [Input2]
-Name='street2'
+Name='road2'
 Range=[0 60]
 NumMFs=3
-MF1='low':'trimf',[0 0 22]
-MF2='medium':'trimf',[10 30 42]
-MF3='high':'trimf',[38 60 60]
+MF1='low':'trimf',[-25 0 20]
+MF2='medium':'trimf',[10 30 50]
+MF3='high':'trimf',[40 60 85]
 
 [Input3]
-Name='street3'
+Name='road3'
 Range=[0 60]
 NumMFs=3
-MF1='low':'trimf',[0 0 22]
-MF2='medim':'trimf',[10 30 42]
-MF3='high':'trimf',[38 60 60]
+MF1='low':'trimf',[-25 0 20]
+MF2='medium':'trimf',[10 30 50]
+MF3='high':'trimf',[40 60 85]
 
 [Input4]
-Name='street4'
+Name='road4'
 Range=[0 60]
 NumMFs=3
-MF1='low':'trimf',[0 0 22]
-MF2='medium':'trimf',[10 30 42]
-MF3='high':'trimf',[38 60 60]
+MF1='low':'trimf',[-25 0 20]
+MF2='medium':'trimf',[10 30 50]
+MF3='high':'trimf',[40 60 85]
 
 [Output1]
-Name='witch-street'
+Name='selectroad'
 Range=[0 14]
 NumMFs=5
-MF1='Lstreet1':'trimf',[0 1 2]
-MF2='Lstreet2':'trimf',[3 4 5]
-MF3='Lstreet3':'trimf',[6 7 8]
-MF4='Lstreet4':'trimf',[9 10 11]
-MF5='no-differ':'trimf',[12 13 14]
+MF1='road1':'trimf',[0 1 2]
+MF2='road2':'trimf',[3 4 5]
+MF3='road3':'trimf',[6 7 8]
+MF4='road4':'trimf',[9 10 11]
+MF5='uncertain':'trimf',[12 13 14]
 
 [Rules]
 1 1 1 1, 5 (1) : 1
